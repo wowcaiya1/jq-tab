@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #tab1{
+        width: 400px;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+    #tab2{
+        width: 200px;
+        height: auto;
+        margin: 20px auto;
+        border: 1px solid #000;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    ul li{
+        float: left;
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-bottom:1px solid #ccc ;
+    }
+    ol li{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        float: left;
+        background:rgba(0, 0, 0, 0.712);
+        margin: 20px;
+    }
+    .hide{
+        display: none;
+    }
+    .active{
+        background: orange;
+        opacity: .5;
+        color: #fff;
+    }
+    #tab2 p{
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+    #tab1 p{
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+    .bg{
+        background: rgba(255, 0, 0, 0.658) ;
+    }
+</style>
+<body>
+    <div id="tab1">
+        <ul>
+            <li class="active">信息公告</li>
+            <li>服务公告</li>
+        </ul>
+        <div>
+            <p>AAAAAAAAAAAAAAAAAAAAAAAA</p>
+            <p class="hide">BBBBBBBBBBBBBBBBBBBBBBBB</p>
+        </div>
+       
+    </div>
+    <div id="tab2">
+        <ol>
+            <li class="bg"></li>
+            <li></li>
+        </ol>
+        <div>
+            <p>1111111111111111111</p>
+            <p class="hide">2222222222222222222</p>
+        </div>
+    </div>
+
+
+    <script src="./jquery.min.js"></script>
+    <script src="./jquery.tab.js"></script>
+    <script>
+        $(function(){
+            var obj1 = {
+                parent:'#tab1',
+                MouseEvent:"click",
+                active:'active'
+            }
+            var obj2 = {
+                parent:'#tab2',
+                MouseEvent:"mouseover",
+                active:'bg'
+             }
+            $('#tab1').tab(obj1)
+            $('#tab2').tab(obj2)
+            
+
+        })
+    </script>
+    
+</body>
+</html>
